@@ -59,8 +59,11 @@ if [ "$TERM" != "dumb" ]; then
     #alias dir='ls --color=auto --format=vertical'
     #alias vdir='ls --color=auto --format=long'
 fi
-
+######################
 # some more ls aliases
+######################
+
+# basic
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias ll="ls -ohF  --time-style=\"+%F %T %z\" --group-directories-first"
 alias lx="ls -ohFX --time-style=\"+%F %T %z\" --group-directories-first"
@@ -70,6 +73,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdlocal="cd /local/scratch/ssd1/lsowa/"
 alias cdw="cd /work/lsowa/"
+
+# ssh
 alias bms3='ssh -X lsowa@ekpbms3.ekp.kit.edu' 
 alias bms2='ssh -X lsowa@ekpbms2.ekp.kit.edu' 
 alias bms1='ssh -X lsowa@ekpbms1.ekp.kit.edu'
@@ -83,11 +88,13 @@ alias naf2='ssh -X lsowa@nafhh-cms02.desy.de'
 alias naf3='ssh -X lsowa@nafhh-cms03.desy.de'
 alias naf4='ssh -X lsowa@nafhh-cms04.desy.de'
 alias naf5='ssh -X lsowa@nafhh-cms05.desy.de'
-#Setup to work in jupyter-notebook on deepthought
+
+#Setup to work in jupyter-notebook on deepthought & worksapce
 alias sshL='ssh -X -L2222:localhost:2222 dt'
 alias setup='cdw && conda activate snowflake && jupyter notebook --no-browser --port=2222'
 alias gbasf='source /work/lsowa/gbasf2KEK/BelleDIRAC/gbasf2/tools/setup && gb2_proxy_init -g belle'
 alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
+alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
