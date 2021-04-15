@@ -130,11 +130,11 @@ else
         eval "$__conda_setup"
     else
         if [ -f "/work/lsowa/miniconda3/etc/profile.d/conda.sh" ]; then
-# . "/work/lsowa/miniconda3/etc/profile.d/conda.sh"  # commented out by conda initialize  # commented out by conda initialize  # commented out by conda initialize  # commented out by conda initialize
+            . "/work/lsowa/miniconda3/etc/profile.d/conda.sh" 
         elif [ -e ~/.miniconda/etc/profile.d/conda.sh ]; then
-# source ~/.miniconda/etc/profile.d/conda.sh  # commented out by conda initialize
+            source ~/.miniconda/etc/profile.d/conda.sh  
         else
-# export PATH="/work/lsowa/miniconda3/bin:$PATH"  # commented out by conda initialize
+            export PATH="/work/lsowa/miniconda3/bin:$PATH"  
         fi
     fi
     unset __conda_setup
