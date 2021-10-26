@@ -59,6 +59,7 @@ if [ "$TERM" != "dumb" ]; then
     #alias dir='ls --color=auto --format=vertical'
     #alias vdir='ls --color=auto --format=long'
 fi
+
 ######################
 # some more ls aliases
 ######################
@@ -72,22 +73,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdlocal="cd /local/scratch/ssd1/lsowa/"
-alias cdw="cd /work/lsowa/"
 
-# ssh
-alias bms3='ssh -X lsowa@ekpbms3.ekp.kit.edu' 
-alias bms2='ssh -X lsowa@ekpbms2.ekp.kit.edu' 
-alias bms1='ssh -X lsowa@ekpbms1.ekp.kit.edu'
-alias cms6='ssh -X lsowa@ekpcms6.ekp.kit.edu'
-alias ekpdt='ssh -X lsowa@ekpdeepthought.ekp.kit.edu'
-alias ekplx='ssh -X lsowa@ekplx17.ekp.kit.edu'
-alias monster='ssh -X lsowa@gpumonster.ekp.kit.edu'
-alias lxplus='ssh -X lsowa@lxplus.cern.ch'
-alias naf1='ssh -X lsowa@nafhh-cms01.desy.de'
-alias naf2='ssh -X lsowa@nafhh-cms02.desy.de'
-alias naf3='ssh -X lsowa@nafhh-cms03.desy.de'
-alias naf4='ssh -X lsowa@nafhh-cms04.desy.de'
-alias naf5='ssh -X lsowa@nafhh-cms05.desy.de'
 
 #Setup to work in jupyter-notebook on deepthought & worksapce
 alias sshL='ssh -X -L2222:localhost:2222 dt'
