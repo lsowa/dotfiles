@@ -73,7 +73,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cdlocal="cd /local/scratch/ssd1/lsowa/"
-
+alias cdw='cd /work/lsowa/'
 
 #Setup to work in jupyter-notebook on deepthought & worksapce
 alias sshL='ssh -X -L2222:localhost:2222 dt'
@@ -81,7 +81,7 @@ alias setup='cdw && conda activate snowflake && jupyter notebook --no-browser --
 alias gbasf='source /work/lsowa/gbasf2KEK/BelleDIRAC/gbasf2/tools/setup && gb2_proxy_init -g belle'
 alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
 alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
-
+alias cmssw='. ~/.cmsenv.sh'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
