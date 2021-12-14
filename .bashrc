@@ -64,6 +64,11 @@ fi
 # some more ls aliases
 ######################
 
+# set umlaute for english keyboard
+if setxkbmap -query | grep -q 'layout:     us,us'; then 
+xmodmap /home/lsowa/.Xmodmap;
+fi
+
 # basic
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias ll="ls -ohF  --time-style=\"+%F %T %z\" --group-directories-first"
