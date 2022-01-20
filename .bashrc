@@ -60,6 +60,12 @@ if [ "$TERM" != "dumb" ]; then
     #alias vdir='ls --color=auto --format=long'
 fi
 
+### GridKa Shift Aliases ###
+
+alias voproxy='voms-proxy-init --voms cms -valid 192:00 -rfc'
+alias shiftprox='gsissh -p 1975 cms-sl7-kit.gridka.de'
+
+
 ######################
 # some more ls aliases
 ######################
@@ -77,8 +83,10 @@ alias la="ls -ohFA --time-style=\"+%F %T %z\" --group-directories-first"
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+
 alias cdlocal="cd /local/scratch/ssd1/lsowa/"
 alias cdw='cd /work/lsowa/'
+alias cdc='cd /ceph/lsowa/'
 
 #Setup to work in jupyter-notebook on deepthought & worksapce
 alias sshL='ssh -X -L2222:localhost:2222 dt'
@@ -87,6 +95,7 @@ alias gbasf='source /work/lsowa/gbasf2KEK/BelleDIRAC/gbasf2/tools/setup && gb2_p
 alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
 alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -121,11 +130,11 @@ else
         eval "$__conda_setup"
     else
         if [ -f "/work/lsowa/miniconda3/etc/profile.d/conda.sh" ]; then
-            . "/work/lsowa/miniconda3/etc/profile.d/conda.sh" 
+            . "/work/lsowa/miniconda3/etc/profile.d/conda.sh"   
         elif [ -e ~/.miniconda/etc/profile.d/conda.sh ]; then
-            source ~/.miniconda/etc/profile.d/conda.sh  
+            source ~/.miniconda/etc/profile.d/conda.sh
         else
-            export PATH="/work/lsowa/miniconda3/bin:$PATH"  
+            export PATH="/work/lsowa/miniconda3/bin:$PATH"
         fi
     fi
     unset __conda_setup
