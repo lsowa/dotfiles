@@ -63,7 +63,7 @@ fi
 ### GridKa Shift Aliases ###
 
 alias voproxy='voms-proxy-init --voms cms -valid 192:00 -rfc'
-alias shiftprox='gsissh -p 1975 cms-sl7-kit.gridka.de'
+alias gridshift='gsissh -p 1975 cms-sl7-kit.gridka.de'
 
 
 ######################
