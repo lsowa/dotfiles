@@ -1,11 +1,12 @@
 # organizing my dotfiles
 clone into repo:
 ```
-git clone --separate-git-dir ~/.dotfiles https://github.com/lsowa/dotfiles.git .   
-```
-create alias for bare git
-```
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+mkdir ~/tmp_dotf
+git clone --separate-git-dir ~/.dotfiles https://github.com/lsowa/dotfiles.git ~/tmp_dotf
+mv -f ~/tmp_dotf/.* ~
+rm -rf ~/tmp_dotf
+alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+dotf config status.showUntrackedFiles no
 ```
 
 checkout:  
