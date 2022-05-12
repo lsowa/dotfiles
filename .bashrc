@@ -96,6 +96,8 @@ alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
 alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
 
+alias snow='source /ceph/lsowa/envs/snow/bin/activate'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -117,30 +119,4 @@ fi
 #echo -e "Load BelleII software and specific software releasetools:\n\tsource /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep"
 #echo -e 'Load gbasf2:\n\t source /work/lsowa/gbasf2KEK/BelleDIRAC/gbasf2/tools/setup && gb2_proxy_init -g belle'
 
-# do not activate conda when working on bms machines
-if [ "${HOSTNAME:0:3}" = "bms" ]
-then
-    echo "no conda loaded"
-    python --version
-else
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('/work/lsowa/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "/work/lsowa/miniconda3/etc/profile.d/conda.sh" ]; then
-            . "/work/lsowa/miniconda3/etc/profile.d/conda.sh"   
-        elif [ -e ~/.miniconda/etc/profile.d/conda.sh ]; then
-            source ~/.miniconda/etc/profile.d/conda.sh
-        else
-            export PATH="/work/lsowa/miniconda3/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-    # <<< conda initialize <<<
-fi
 
-#export PYTHONPATH=/work/lsowa/main/
-export PATH="~/.miniconda/bin:$PATH" 
- 
