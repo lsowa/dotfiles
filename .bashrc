@@ -6,6 +6,15 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# fancy less colors
+export LESS_TERMCAP_mb=$'\E[01;31m'
+export LESS_TERMCAP_md=$'\E[01;31m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'
+export LESS_TERMCAP_so=$'\E[01;44;33m'
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[01;32m'
+
 # don't put duplicate lines in the history. See bash(1) for more options
 export HISTCONTROL=ignoredups
 
@@ -63,7 +72,7 @@ fi
 ### GridKa Shift Aliases ###
 
 alias voproxy='voms-proxy-init --voms cms -valid 192:00 -rfc'
-alias gridshift='gsissh -p 1975 cms-sl7-kit.gridka.de'
+alias gridshift='voproxy && gsissh -p 1975 cms-sl7-kit.gridka.de'
 
 
 ######################
@@ -72,6 +81,8 @@ alias gridshift='gsissh -p 1975 cms-sl7-kit.gridka.de'
 
 # set umlaute for english keyboard
 if setxkbmap -query | grep -q 'layout:     us,us'; then 
+xmodmap /home/lsowa/.Xmodmap;
+elif setxkbmap -query | grep -q 'layout:     us'; then
 xmodmap /home/lsowa/.Xmodmap;
 fi
 
