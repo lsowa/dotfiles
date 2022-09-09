@@ -111,6 +111,7 @@ alias smi='nvidia-htop.py -c -l'
 alias snow='source /ceph/lsowa/envs/snow/bin/activate'
 alias tf='source /ceph/lsowa/envs/tf/bin/activate'
 alias tcdev='source /ceph/lsowa/envs/tcdev/bin/activate'
+alias cluster='source /ceph/lsowa/envs/cluster/bin/activate'
 
 
 # enable programmable completion features (you don't need to enable
