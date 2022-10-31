@@ -107,7 +107,7 @@ alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
 alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
 alias smi='nvidia-htop.py -c -l'
-
+alias watch smi='watch -n 1 nvidia-htop.py -c -l'
 alias snow='source /ceph/lsowa/envs/snow/bin/activate'
 alias tf='source /ceph/lsowa/envs/tf/bin/activate'
 alias tcdev='source /ceph/lsowa/envs/tcdev/bin/activate'
