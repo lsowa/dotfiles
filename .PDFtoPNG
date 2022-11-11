@@ -1,0 +1,7 @@
+#!/bin/bash
+
+for i in $(ls *.pdf); do
+    echo "converting $i to .png ..."
+    convert -density 300 -trim $i -quality 90 `echo $i | sed 's/.pdf/.png/g'`
+done
+
