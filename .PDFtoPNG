@@ -1,4 +1,5 @@
 #!/bin/bash
+# Stolen from N. Faltermann
 
 for i in $(ls *.pdf); do
     echo "converting $i to .png ..."
