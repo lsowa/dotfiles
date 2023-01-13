@@ -108,10 +108,11 @@ alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
 alias smi='nvidia-htop.py -c -l'
 alias watch smi='watch -n 1 nvidia-htop.py -c -l'
-alias snow='source /ceph/lsowa/envs/snow/bin/activate'
-alias tf='source /ceph/lsowa/envs/tf/bin/activate'
-alias tcdev='source /ceph/lsowa/envs/tcdev/bin/activate'
-alias cluster='source /ceph/lsowa/envs/cluster/bin/activate'
+
+alias snow='source /work/lsowa/envs/snow/bin/activate'
+alias tf='source /work/lsowa/envs/tf/bin/activate'
+alias tcdev='source /work/lsowa/envs/tcdev/bin/activate'
+alias cluster='source /work/lsowa/envs/cluster/bin/activate'
 
 
 # enable programmable completion features (you don't need to enable
