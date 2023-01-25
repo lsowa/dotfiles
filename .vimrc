@@ -71,8 +71,12 @@ Plug 'vim-airline/vim-airline'
 " Install and enable vim-fugitive plugin
 Plug 'tpope/vim-fugitive'
 
+" Enable mouse support
+set mouse=a
+
 call plug#end()
 
 " Run :PlugInstall in Vim after adding your plugins to install them
 
 nmap <F2> :NERDTreeToggle<CR>
+set guitablabel=(%N)\ %t\ %M
