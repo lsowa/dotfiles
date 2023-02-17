@@ -72,7 +72,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-fugitive'
 
 " Enable mouse support
-set mouse=a
+"set mouse=a
 
 call plug#end()
 
