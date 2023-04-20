@@ -6,6 +6,15 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# If in tmux
+#if ! { [ "$TERM" = "screen" ] && [ -n "$TMUX" ]; } then
+#    echo "tmux shell detected"
+#fi
+
+
+
+
+
 # fancy less colors
 export LESS_TERMCAP_mb=$'\E[01;31m'
 export LESS_TERMCAP_md=$'\E[01;31m'
@@ -39,6 +48,8 @@ xterm-color)
     PS1='${debian_chroot:+($debian_chroot)}\[\033[7;37m\][ \h ]\[\033[0m\] $PWD > '
     ;;
 esac
+
+# set a fancy prompt with git information
 
 # Comment in the above and uncomment this below for a color prompt
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
@@ -80,11 +91,11 @@ alias gridshift='voproxy && gsissh -p 1975 cms-sl7-kit.gridka.de'
 ######################
 
 # set umlaute for english keyboard
-if setxkbmap -query | grep -q 'layout:     us,us'; then 
-xmodmap /home/lsowa/.Xmodmap;
-elif setxkbmap -query | grep -q 'layout:     us'; then
-xmodmap /home/lsowa/.Xmodmap;
-fi
+#if setxkbmap -query | grep -q 'layout:     us,us'; then 
+#xmodmap /home/lsowa/.Xmodmap;
+#elif setxkbmap -query | grep -q 'layout:     us'; then
+#xmodmap /home/lsowa/.Xmodmap;
+#fi
 
 # basic
 alias dotf='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
@@ -107,12 +118,11 @@ alias basf='source /cvmfs/belle.cern.ch/tools/b2setup light-2002-ichep'
 alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
 alias smi='nvidia-htop.py -c -l'
-alias watch smi='watch -n 1 nvidia-htop.py -c -l'
 
-alias snow='source /work/lsowa/envs/snow/bin/activate'
-alias tf='source /work/lsowa/envs/tf/bin/activate'
-alias tcdev='source /work/lsowa/envs/tcdev/bin/activate'
+alias snow='source /work/lsowa/envs/snowflake/bin/activate'
 alias cluster='source /work/lsowa/envs/cluster/bin/activate'
+
+alias vim="TERM=xterm vim"
 
 
 # enable programmable completion features (you don't need to enable
