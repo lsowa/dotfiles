@@ -120,6 +120,7 @@ alias cmssw='. ~/.cmsenv.sh'
 alias smi='watch -n 1 nvidia-htop.py -c -l'
 
 alias snow='source /work/lsowa/envs/snowflake/bin/activate'
+alias calo='source /work/lsowa/envs/caloML/bin/activate'
 alias cluster='source /work/lsowa/envs/cluster/bin/activate'
 
 alias vim="TERM=xterm vim"
