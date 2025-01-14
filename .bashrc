@@ -83,7 +83,7 @@ fi
 ### GridKa Shift Aliases ###
 
 alias voproxy='voms-proxy-init --voms cms -valid 192:00 -rfc'
-alias gridshift='voproxy && gsissh -p 1975 cms-sl7-kit.gridka.de'
+alias gridshift='voproxy && gsissh -p 1975 cms-el8-kit.gridka.de'
 
 
 ######################
@@ -119,7 +119,8 @@ alias ts='~/TeamSpeak3-Client-linux_amd64/ts3client_runscript.sh'
 alias cmssw='. ~/.cmsenv.sh'
 alias smi='watch -n 1 nvidia-htop.py -c -l'
 
-alias snow='source /work/lsowa/envs/snowflake/bin/activate'
+#alias snow='source /work/lsowa/envs/snowflake/bin/activate'
+alias snow='source /work/lsowa/envs/snowflake39/bin/activate'
 alias slcg='source /work/lsowa/envs/snowflakelcg/bin/activate && source /cvmfs/sft.cern.ch/lcg/views/LCG_104/x86_64-centos7-gcc11-opt/setup.sh && export QT_QPA_PLATFORM=offscreen'
 alias calo='source /work/lsowa/envs/caloML/bin/activate'
 alias cluster='source /work/lsowa/envs/cluster/bin/activate'
