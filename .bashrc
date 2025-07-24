@@ -152,3 +152,4 @@ fi
 #echo -e 'Load gbasf2:\n\t source /work/lsowa/gbasf2KEK/BelleDIRAC/gbasf2/tools/setup && gb2_proxy_init -g belle'
 
 
+. "/home/lsowa/.deno/env"
